@@ -1,0 +1,6 @@
+add_subdirectory(search_tree)
+add_subdirectory(avl_tree)
+add_subdirectory(sort)
+add_subdirectory(list)
+add_subdirectory(string)
+add_subdirectory(leetcode)
