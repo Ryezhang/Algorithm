@@ -1,6 +1,7 @@
 #ifndef _DATA_STRUCTURE_H
 
 #include <iostream>
+#include <vector>
 
 class DataStructure {
 
@@ -22,6 +23,14 @@ public:
         BinaryTreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     };
 
+    BinaryTreeNode* ConstructTreeFromArray(int arr[], int len);
+    void EmptyTree(BinaryTreeNode* root);
+    int Height(BinaryTreeNode* root);
+    
+    std::vector<int> PreorderTraverse(BinaryTreeNode* root);
+    std::vector<int> InorderTraverse(BinaryTreeNode* root);
+    std::vector<int> PostorderTraverse(BinaryTreeNode* root);
+    std::vector<int> LevelOrderTraverse(BinaryTreeNode* root);
 
 public:
     void QuickSort(int arr[], int l, int r);
@@ -37,7 +46,9 @@ public:
     void InsertSort(int arr[], int len);
 
     int BinarySearch(int arr[], int len, int x);
-    int BinarySearchFirst(int arr[], int len, int x);
-    int BinarySearchLast(int arr[], int len, int x);
+    int BinarySearchFirstE(int arr[], int len, int x);
+    int BinarySearchFirstGE(int arr[], int len, int x);
+    int BinarySearchLastE(int arr[], int len, int x);
+    int BinarySearchLastLE(int arr[], int len, int x);
 };
 #endif
